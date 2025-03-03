@@ -108,6 +108,7 @@ export function ContactForm({ id }: ContactProps) {
                     value={formData.firstName}
                     onChange={handleChange}
                     containerProps={{ className: "!min-w-full mb-3 md:mb-0" }}
+                    crossOrigin={undefined}
                   />
                   <Input
                     color="gray"
@@ -119,6 +120,7 @@ export function ContactForm({ id }: ContactProps) {
                     value={formData.lastName}
                     onChange={handleChange}
                     containerProps={{ className: "!min-w-full" }}
+                    crossOrigin={undefined}
                   />
                 </div>
                 <Input
@@ -131,6 +133,7 @@ export function ContactForm({ id }: ContactProps) {
                   value={formData.email}
                   onChange={handleChange}
                   containerProps={{ className: "!min-w-full mb-8" }}
+                  crossOrigin={undefined}
                 />
                 <Typography variant="lead" className="!text-blue-gray-500 text-sm mb-2">
                   What are you interested in?
@@ -145,6 +148,7 @@ export function ContactForm({ id }: ContactProps) {
                       value={option}
                       checked={formData.type === option}
                       onChange={handleChange}
+                      crossOrigin={undefined}
                     />
                   ))}
                 </div>

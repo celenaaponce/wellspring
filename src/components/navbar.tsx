@@ -38,16 +38,16 @@ interface NavItemProps {
 }
 
 function NavItem({ children, href }: NavItemProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    if (href?.startsWith("#")) {
+  const handleClick = (e: React.MouseEvent) => {
+    const target = e.currentTarget as HTMLAnchorElement;
+    if (target?.href?.startsWith("#")) {
       e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      const section = document.querySelector(target.getAttribute("href")!);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
   };
-
   return (
     <li>
       <Typography
@@ -86,7 +86,9 @@ export function Navbar() {
         <Typography
           as="a"
           href="#"
-          onClick={scrollToTop}
+          onClick={(e) =>
+            scrollToTop(e as React.MouseEvent<HTMLAnchorElement, MouseEvent>)
+          }
           color="blue-gray"
           className="text-lg font-bold cursor-pointer"
         >
