@@ -72,13 +72,13 @@ export function Services({ id }: ServicesProps) {
             the way. Our comprehensive treatment options are designed to address
             the unique needs of each client, fostering a path to healing and
             wellness. <br></br>
-            <br></br>In addition to our core services, we are proud to be
-            connected with industry leaders in Portland. This network allows us
-            to provide our clients with access to a wide range of resources and
-            referrals, ensuring that you receive the best possible care. Whether
-            you need specialized therapy, support groups, or aftercare services,
-            we are committed to connecting you with the right resources to aid
-            in your recovery.
+            <br></br> we provide compassionate and effective substance use treatment in Portland. 
+            We believe in a supportive and personalized approach,
+            helping individuals build a path toward lasting recovery.
+            Our primary focus is on early intervention and 
+            intensive outpatient care, ensuring accessible and flexible treatment options.
+
+.
           </Typography>
         </div>
         <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
